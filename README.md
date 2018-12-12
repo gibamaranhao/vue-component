@@ -1,6 +1,11 @@
 # vue-component
 A Simple Vue Component loader for PHP
 
+[![Latest Stable Version](https://poser.pugx.org/gibamaranhao/vue-component/v/stable)](https://packagist.org/packages/gibamaranhao/vue-component)
+[![Total Downloads](https://poser.pugx.org/gibamaranhao/vue-component/downloads)](https://packagist.org/packages/gibamaranhao/vue-component)
+[![Latest Unstable Version](https://poser.pugx.org/gibamaranhao/vue-component/v/unstable)](https://packagist.org/packages/gibamaranhao/vue-component)
+[![License](https://poser.pugx.org/gibamaranhao/vue-component/license)](https://packagist.org/packages/gibamaranhao/vue-component)
+
 vue-component allows you to create single-file style codes and generate component code to be added to HTML 
 without the need to work with webpack, vue-cli or npm.
 
