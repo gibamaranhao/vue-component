@@ -7,7 +7,7 @@ class VueComponent
    * Components Registry. A list of full path of the component file
    * @var array
    */
-  private $_components = [];
+  private $components = [];
   /**
    * The prefix of the template Id
    * @var string
@@ -21,7 +21,7 @@ class VueComponent
    */
   public function registerComponentsFromDir($componentsDir)
   {
-    self::$_components = array_merge($this->_components,$this->getAllFiles($componentsDir));
+    $this->components = array_merge($this->components,$this->getAllFiles($componentsDir));
   }
 
   /**
@@ -32,9 +32,9 @@ class VueComponent
   public function registerComponents($components)
   {
     if(is_array($components)) {
-      $this->_components = array_merge(self::$_components,$components);
+      $this->components = array_merge($this->components,$components);
     }else if(is_string($components)) {
-      $this->_components[] = $components;
+      $this->components[] = $components;
     }
   }
 
@@ -74,8 +74,8 @@ class VueComponent
   public function renderAllComponents()
   {
     $html = '';
-    foreach ($this->_components as $key => $value) {
-      $html .= self::renderComponent($key, $value);
+    foreach ($this->components as $key => $value) {
+      $html .= $this->renderComponent($key, $value);
     }
     return $html;
   }
