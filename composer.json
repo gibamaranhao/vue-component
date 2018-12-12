@@ -19,7 +19,7 @@
     "minimum-stability" : "dev",
     "autoload" : {
       "psr-4" : {
-        "gibamaranhao\\" : "src/gibamaranhao"
+        "gibamaranhao\\" : "/src"
       }
     }
 }
