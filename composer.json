@@ -1,0 +1,14 @@
+{
+    "name": "gibamaranhao/vue-component",
+    "description": "A Simple Vue Component loader for PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Goliveira",
+            "email": "goliveira@amptec.com.br"
+        }
+    ],
+    "require": {
+      "php" : "^5.6",
+    },    
+}
