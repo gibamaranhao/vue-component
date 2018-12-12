@@ -1,6 +1,11 @@
 {
     "name": "gibamaranhao/vue-component",
     "description": "A Simple Vue Component loader for PHP",
+    "keywords": [
+      "php",
+      "vue",
+      "component"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -10,5 +15,11 @@
     ],
     "require": {
       "php" : ">=5.6|>=7.0"
+    },
+    "minimum-stability" : "dev",
+    "autoload" : {
+      "psr-4" : {
+        "gibamaranhao\\" : "src/gibamaranhao"
+      }
     }
 }
