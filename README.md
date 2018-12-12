@@ -22,7 +22,7 @@ Execute composer update to install
 
 ## Usage
 
-Create a component folder and a component file (the extension can be .vue, .js, .php, .html ,not matters):
+Create a component folder and a component file (the extension can be .vue, .js, .php, .html ,no matters):
 
 components/App.vue
 
