@@ -8,6 +8,7 @@ class VueComponent
    * @var array
    */
   private $components = [];
+
   /**
    * The prefix of the template Id
    * @var string
@@ -21,7 +22,16 @@ class VueComponent
    */
   public function registerComponentsFromDir($componentsDir)
   {
-    $this->components = array_merge($this->components,$this->getAllFiles($componentsDir));
+    $this->components = array_merge($this->components, $this->getAllFiles($componentsDir));
+  }
+
+  /**
+   * Retorna a lista de componentes registrados
+   * @return array Lista de componentes
+   */
+  public function getComponents()
+  {
+    return $this->components;
   }
 
   /**
@@ -32,8 +42,8 @@ class VueComponent
   public function registerComponents($components)
   {
     if(is_array($components)) {
-      $this->components = array_merge($this->components,$components);
-    }else if(is_string($components)) {
+      $this->components = array_merge($this->components, $components);
+    }else if( is_string($components) ) {
       $this->components[] = $components;
     }
   }
@@ -63,7 +73,7 @@ class VueComponent
     $js = $this->getJs($id, $script);
     $css = $this->getCss($script);
 
-    $html = $template.$js.$css;
+    $html = $template . $js . $css;
     return $html;
   }
 
@@ -90,7 +100,7 @@ class VueComponent
   {
     preg_match('/<template[^<>]{0,}>(.*)<\/template[^<>]{0,}>/ms',$script, $matches);
     $tpl = isset($matches[1]) ? trim($matches[1]) : null;
-    return '<template id="'.$id.'">'.$tpl.'</template>';
+    return '<template id="' . $id . '">' . $tpl . '</template>';
   }
 
   /**
